@@ -7,124 +7,186 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     tools:context=".MainActivity"
-    android:paddingTop="25dp">
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:padding="16dp">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/useric"
-            android:layout_centerVertical="true"/>
+    android:paddingTop="25dp"
+    android:fitsSystemWindows="true">
 
-        <TextView
+
+    <!-- Header -->
+    <include
+        android:id="@id/header"
+        layout="@layout/toolbartop"/>
+
+    <!-- srollview  main -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        android:scrollbars="none">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/iconmusic"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"/>
+            <!--        <Button-->
+            <!--            android:id="@+id/btnprevious"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:background="@color/transparent" />-->
 
-    </RelativeLayout>
+            <!-- slide -->
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:id="@+id/viewflipper"
+                android:layout_gravity="center"
+                android:autoStart="true"
+                android:flipInterval="3000"/>
 
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_below="@id/toolbar"-->
-<!--        android:layout_above="@+id/toolbarbot">-->
+            <!--        <Button-->
+            <!--            android:id="@+id/btnnext"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="match_parent"-->
+            <!--            android:background="@color/transparent"-->
+            <!--            android:layout_alignParentEnd="true" />-->
 
+            <!-- srollview newsong -->
 
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-<!--            <Button-->
-<!--                android:id="@+id/btnprevious"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@color/black"-->
-<!--                />-->
-<!--            <ViewFlipper-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:id="@+id/viewflipper"-->
-<!--                android:layout_gravity="center"/>-->
+            <LinearLayout
+                android:id="@+id/newsong"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtnewsong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Song"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
 
-<!--            <Button-->
-<!--                android:id="@+id/btnnext"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@color/black"-->
-<!--                android:layout_alignParentEnd="true"/>-->
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/b2"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="8dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/b3"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="8dp"/>
+                    </LinearLayout>
 
-<!--        </RelativeLayout>-->
-<!--    </ScrollView>-->
+                </HorizontalScrollView>
+            </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:layout_below="@id/toolbar"
-        android:layout_marginTop="30dp">
-<!--        <Button-->
-<!--            android:id="@+id/btnprevious"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:background="@color/transparent" />-->
-        <ViewFlipper
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/viewflipper"
-            android:layout_gravity="center"
-            android:autoStart="true"
-            android:flipInterval="3000"/>
+            <!-- srollview  popularsinger -->
+            <LinearLayout
+                android:id="@+id/popularSinger"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtpsinger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular Singer"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/b2"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="8dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/b3"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="8dp"/>
+                    </LinearLayout>
 
-<!--        <Button-->
-<!--            android:id="@+id/btnnext"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:background="@color/transparent"-->
-<!--            android:layout_alignParentEnd="true" />-->
-    </RelativeLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:background="@color/menubot2"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/toolbarbot">
+            <!-- srollview  hotalbum -->
+            <LinearLayout
+                android:id="@+id/hotalbum"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txthotalbum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hot Album"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/b2"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="8dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/b3"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"
+                            android:layout_margin="8dp"/>
+                    </LinearLayout>
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/homeic"
-            android:layout_centerVertical="true"/>
+                </HorizontalScrollView>
+            </LinearLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:src="@drawable/searchic"
-            android:layout_centerVertical="true"
-            android:gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/albumic"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
+    <!--  bottom  -->
 
+    <include
+        android:id="@+id/footer"
+        layout="@layout/toolbarbot"/>
 
 
 </RelativeLayout>

@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background">#14162C</color>
-    <color name="menubot">#C31A1C3A</color>
+    <color name="menubot">#F21A1C3A</color>
     <color name="menubot2">#4D000000</color>
     <color name="transparent">#00FFFFFF</color>
 </resources>
