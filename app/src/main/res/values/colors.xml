@@ -6,4 +6,8 @@
     <color name="menubot">#F21A1C3A</color>
     <color name="menubot2">#4D000000</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="pink">#FD4485</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="white1">#8D595151</color>
+    <color name="background1">#385388</color>
 </resources>

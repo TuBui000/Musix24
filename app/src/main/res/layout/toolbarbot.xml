@@ -2,30 +2,139 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
+    android:padding="10dp"
     android:background="@color/menubot"
     android:layout_alignParentBottom="true"
     android:id="@+id/toolbarbot">
 
-    <ImageView
-        android:id="@+id/homebtn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/homeic"
-        android:layout_centerVertical="true"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/homebtn"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:src="@drawable/homeic"-->
+<!--        android:layout_centerVertical="true"/>-->
 
-    <ImageView
-        android:id="@+id/searchbtn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/searchic" />
+<!--    <ImageView-->
+<!--        android:id="@+id/searchbtn"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:src="@drawable/searchic" />-->
 
-    <ImageView
-        android:id="@+id/albumbtn"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/albumic"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true" />
+<!--    <ImageView-->
+<!--        android:id="@+id/libarybtn"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:src="@drawable/albumic"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_alignParentEnd="true" />-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/homebtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Trang chủ"-->
+<!--        android:textColor="@color/pink"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:drawableTop="@drawable/iconhome"-->
+<!--        android:drawablePadding="5dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/searchbtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Tìm kiếm"-->
+<!--        android:textColor="@color/pink"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:drawableTop="@drawable/iconsearch"-->
+<!--        android:drawablePadding="5dp"-->
+<!--        android:layout_centerInParent="true"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/libarybtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Thư viện"-->
+<!--        android:textColor="@color/pink"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:drawableTop="@drawable/iconlibary"-->
+<!--        android:drawablePadding="5dp"-->
+<!--        android:layout_alignParentEnd="true"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/homebtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/pink"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:drawableTop="@drawable/iconhome"
+            android:drawablePadding="5dp"/>
+
+        <TextView
+            android:id="@+id/searchbtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@color/pink"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:drawableTop="@drawable/iconsearch"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:id="@+id/libarybtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Libary"
+            android:textColor="@color/pink"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:drawableTop="@drawable/iconlibary"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:id="@+id/allsongsbtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="All songs"
+            android:textColor="@color/pink"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:drawableTop="@drawable/iconallsong"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:id="@+id/premiumbtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Premium"
+            android:textColor="@color/pink"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:drawableTop="@drawable/iconpre"
+            android:drawablePadding="5dp" />
+
+</LinearLayout>
+
+
 </RelativeLayout>

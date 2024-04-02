@@ -1,18 +1,14 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
+import android.widget.TextView
 import android.widget.ViewFlipper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import android.content.Intent
-import android.widget.ImageButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,22 +52,37 @@ class MainActivity : AppCompatActivity() {
 //            viewFlipper.showPrevious()
 //        }
 
-        val searchbtn = findViewById<ImageView>(R.id.searchbtn)
+        val searchbtn = findViewById<TextView>(R.id.searchbtn)
         searchbtn.setOnClickListener {
             val intent = Intent(this@MainActivity, SearchActivity::class.java)
             startActivity(intent)
             overridePendingTransition(0, 0)
         }
 
-        val homebtn = findViewById<ImageView>(R.id.homebtn)
+        val homebtn = findViewById<TextView>(R.id.homebtn)
         homebtn.setOnClickListener {
             val intent = Intent(this@MainActivity, MainActivity::class.java)
             startActivity(intent)
             overridePendingTransition(0, 0)
         }
-        val albumbtn = findViewById<ImageView>(R.id.albumbtn)
-        albumbtn.setOnClickListener {
+
+        val libarybtn = findViewById<TextView>(R.id.libarybtn)
+        libarybtn.setOnClickListener {
             val intent = Intent(this@MainActivity, MainActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        val allsongs = findViewById<TextView>(R.id.allsongsbtn)
+        allsongs.setOnClickListener {
+            val intent = Intent(this@MainActivity, AllsongsActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(0, 0)
+        }
+
+        val premium = findViewById<TextView>(R.id.premiumbtn)
+        premium.setOnClickListener {
+            val intent = Intent(this@MainActivity, PremiumActivity::class.java)
             startActivity(intent)
             overridePendingTransition(0, 0)
         }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/player"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity"
+    android:background="@color/background1"
+    android:fitsSystemWindows="true">
+
+    <!--   backleft  -->
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:id="@+id/toolbarplayer">
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/iconbackleft"
+            android:layout_centerVertical="true"/>
+    </LinearLayout>
+
+    <!--   imgsong  -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imgplayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        app:cardCornerRadius="20dp">
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/song1" />
+    </androidx.cardview.widget.CardView>
+
+    <!--   InfoSong  -->
+    <LinearLayout
+        android:id="@+id/infosong"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgplayer"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Thấy Chưa"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Ngọt"
+            android:textSize="15sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+        <!--Seekbar-->
+    <RelativeLayout
+        android:id="@+id/layout_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infosong"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+        <SeekBar
+            android:id="@+id/seekbarsong"
+            android:layout_width="match_parent"
+            android:layout_height="8sp"
+            android:thumb="@null"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressDrawable="@drawable/custom_seekbar"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:layout_below="@+id/seekbarsong"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:layout_below="@+id/seekbarsong"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <!--   button  -->
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp">
+
+       <ImageView
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:src="@drawable/backic" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/playic"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/nextic"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
